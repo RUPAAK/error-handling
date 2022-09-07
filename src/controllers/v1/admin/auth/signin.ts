@@ -1,16 +1,17 @@
 import { Request, Response } from "express";
 import { BadRequestError } from "../../../../common/errors/BadRequestError";
+import { Role } from "../../../../common/types/role";
+import { User } from "../../../../model/user";
 
 const signinAdmin = async (req: Request, res: Response) => {
   try {
-    const { email } = req.body;
+    const { email, password } = req.body;
 
-    if (!email) {
-      throw new BadRequestError("Email Field not provied");
-      // return res.status(400).send({
-      //   message: "Email not found",
-      // });
-    }
+    const user = User.build({ email, password, role: Role.admin });
+
+    const createdUser = await user.save();
+    
+    res.send("Working");
   } catch (error) {
     throw new BadRequestError(
       (error as any).message ? (error as any).message : "Something bad"
