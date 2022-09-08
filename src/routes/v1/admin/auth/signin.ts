@@ -4,7 +4,6 @@ import { body, param, query } from "express-validator";
 import { validateRequest } from "../../../../middlewares/validateRequest";
 
 const router = Router();
-
 router.post(
   "/signin",
   [

@@ -12,7 +12,7 @@ interface UserModel extends mongoose.Model<UserDoc> {
   build(attrs: UserAttrs): UserDoc;
 }
 
-interface UserDoc extends mongoose.Document, UserAttrs {
+export interface UserDoc extends mongoose.Document, UserAttrs {
   email: string;
   password: string;
   role: Role;
