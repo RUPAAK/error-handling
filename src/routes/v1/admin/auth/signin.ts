@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { signinAdminHandler } from "../../../../controllers/v1/admin/auth/signin";
 import { body, param, query } from "express-validator";
-import { validateRequest } from "../../../../middlewares/validateRequest";
+// import { validateRequest } from "../../../../middlewares/validateRequest";
 
 const router = Router();
 router.post(
@@ -16,7 +16,7 @@ router.post(
       .notEmpty()
       .withMessage("Valid password field must be provided"),
   ],
-  validateRequest,
+  // validateRequest,
   signinAdminHandler
 );
 
