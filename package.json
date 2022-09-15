@@ -7,6 +7,7 @@
   "scripts": {
     "server": "ts-node-dev src/server.ts",
     "test": "jest",
+    "single": "jest profile.test.ts",
     "coverage": "jest --coverage"
   },
   "keywords": [],
@@ -39,6 +40,7 @@
     "jest": "^29.0.3",
     "jest-junit": "^14.0.1",
     "jsonwebtoken": "^8.5.1",
+    "mongodb-memory-server": "^8.9.2",
     "mongoose": "^6.5.4",
     "supertest": "^6.2.4"
   },

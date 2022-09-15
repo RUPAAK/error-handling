@@ -6,9 +6,11 @@ import jwt from "jsonwebtoken";
 
 const getProfile = async (req: Request, res: Response) => {
   try {
-    res.send("Secret Database Data. Only for Admin. Not for user");
+    res.end();
+    // res.send("Secret Database Data. Only for Admin. Not for user");
     // const u
   } catch (error) {
+    console.log(error);
     throw new BadRequestError(
       (error as any).message ? (error as any).message : "Something bad"
     );

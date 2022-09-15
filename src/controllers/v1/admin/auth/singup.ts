@@ -14,9 +14,19 @@ const signupAdmin = async (req: Request, res: Response) => {
       name,
       role: Role.user,
     }).save();
-    // console.log(user);
 
-    res.status(201).send();
+    const accessToken = jwt.sign(
+      {
+        email: email,
+        id: user.id,
+      },
+      "key"
+    );
+
+    res.status(201).send({
+      accessToken,
+      data: user,
+    });
   } catch (error) {
     throw new BadRequestError(
       (error as any).message ? (error as any).message : "Something bad"

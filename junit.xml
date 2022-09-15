@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="0" errors="0" time="4.404">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-09-14T16:24:41" time="4.295" tests="5">
-    <testcase classname=" if signup route exist or not" name=" if signup route exist or not" time="0.05">
+<testsuites name="jest tests" tests="14" failures="0" errors="0" time="16.312">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-09-15T16:32:54" time="15.133" tests="4">
+    <testcase classname=" if signup route exist or not" name=" if signup route exist or not" time="0.058">
     </testcase>
-    <testcase classname=" should return 400 if email field is empty" name=" should return 400 if email field is empty" time="0.041">
+    <testcase classname=" should return 401 if token is not provided" name=" should return 401 if token is not provided" time="0.017">
     </testcase>
-    <testcase classname=" should return 400 if valid email is not provided" name=" should return 400 if valid email is not provided" time="0.009">
+    <testcase classname=" should return 401 if token is provided but it is invalid" name=" should return 401 if token is provided but it is invalid" time="0.007">
     </testcase>
-    <testcase classname=" should return 400 if name field is empty" name=" should return 400 if name field is empty" time="0.017">
+    <testcase classname=" should return 403 if user tries to access this route" name=" should return 403 if user tries to access this route" time="0.096">
     </testcase>
-    <testcase classname=" should return 400 if password field is empty" name=" should return 400 if password field is empty" time="0.01">
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-09-15T16:32:54" time="15.126" tests="10">
+    <testcase classname=" if signup route exist or not" name=" if signup route exist or not" time="0.067">
+    </testcase>
+    <testcase classname=" should return 400 if email field is empty" name=" should return 400 if email field is empty" time="0.043">
+    </testcase>
+    <testcase classname=" should return 400 if valid email is not provided" name=" should return 400 if valid email is not provided" time="0.01">
+    </testcase>
+    <testcase classname=" should return 400 if name field is empty" name=" should return 400 if name field is empty" time="0.013">
+    </testcase>
+    <testcase classname=" should return 400 if password field is empty" name=" should return 400 if password field is empty" time="0.012">
+    </testcase>
+    <testcase classname=" should return 201 status after successfuly operation" name=" should return 201 status after successfuly operation" time="0.037">
+    </testcase>
+    <testcase classname=" should return name and email" name=" should return name and email" time="0.013">
+    </testcase>
+    <testcase classname=" should return same name and same email" name=" should return same name and same email" time="0.01">
+    </testcase>
+    <testcase classname=" should not return password" name=" should not return password" time="0.014">
+    </testcase>
+    <testcase classname=" should not return _id but id and should not return __v" name=" should not return _id but id and should not return __v" time="0.016">
     </testcase>
   </testsuite>
 </testsuites>
